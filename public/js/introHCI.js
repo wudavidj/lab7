@@ -1,20 +1,30 @@
 'use strict';
 
-// Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-	$(".likeCtr").click(likeClick);
+
 });
 
+
+function initializePage() {
+	$(".likeCtr").click(function() {
+		ga("send", "event", 'like', 'click');
+	});
+}
+
 /*
- * Function that is called when the document is ready.
- */
+'use strict';
+
+$(document).ready(function() {
+	initializePage();
+	$(".likeCtr").click(function() {
+		ga("send", "event", <'like'>, <'click'>);
+	});
+});
+
+
 function initializePage() {
 	// your code here
 }
 
-function likeClick(e) {
-	e.preventDefault();
-	ga("send", "event", <'like'>, <'click'>);
-	// your code here
-}
+*/
