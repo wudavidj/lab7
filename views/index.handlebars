@@ -2,13 +2,13 @@
 
 <html>
 <head>
-	<title>HCI Project Portfolio</title>	
+	<title>HCI Project Portfolio</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/introHCI.css" rel="stylesheet">
-  
+
 </head>
 
 <body>
@@ -26,7 +26,11 @@
 						<img src="images/{{image}}" alt="Lorem Pixel image" class="img-responsive">
 						<h4>{{title}}</h4>
 					</a>
+					{{#if viewAlt}}
+					<div class="likeCtr"> Min! <button class="btn btn-default likeBtn">Like</button></div>
+					{{else}}
 					<div class="likeCtr"><button class="btn btn-default likeBtn">Like</button></div>
+					{{/if}}
 					<div class="details"></div>
 				</div>
 			</div>
@@ -36,5 +40,16 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/introHCI.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114602236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114602236-1');
+</script>
+
+
 </body>
 </html>
